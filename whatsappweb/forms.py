@@ -1,5 +1,5 @@
 from django import forms
-from .models import Message
+from .models import Message, Employe
 
 class MessageForm(forms.ModelForm):
 
@@ -9,3 +9,8 @@ class MessageForm(forms.ModelForm):
 
 
 
+class EmployeForm(forms.ModelForm):
+
+    class Meta:
+        model = Employe
+        fields = ('name', 'designation', 'phone_no')
